@@ -1,6 +1,5 @@
 <?php
-define ('HOME', dirname(__FILE__));
-define ('SECRET_KEY', 'ashdj#');
+require_once('config.php');
 
 require_once('includes/db.php');
 require_once('includes/functions.php');
@@ -13,17 +12,11 @@ $errors = 0;
 $errorMessages = array();
 $routeParams = [];
 
-
-
-
-
 if (isset($_GET['_route']) && !empty($_GET['_route'])) {
 	$route = rtrim($_GET['_route'], '/');
 }else{
 	$route = 'index';
 }
-
-
 
 if (strpos($route,'/')) {
 	$path = explode('/', $route);
@@ -31,7 +24,6 @@ if (strpos($route,'/')) {
 
 //Prepare get
 $getVariables = array();
-
 
 unset($_GET['_route']);
 foreach ($_GET as $key => $value) {
