@@ -8,8 +8,5 @@
 
 
 $_routes = [
-	
-    
-    'welcome/{param}' => 'index'
-
+    'welcome/{param}' => 'index',
 ];

@@ -1,7 +1,7 @@
 <?php
 
-if(isset($routeParams['param'])){
+if (isset($routeParams['param'])) {
 	$name = $routeParams['param'];
-}else{
+} else {
 	$name = 'Guest';
 }
