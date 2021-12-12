@@ -1,9 +1,9 @@
 <?php
 require_once('config.php');
 
-require_once(__DIR__ . '/app/includes/db.php');
-require_once(__DIR__ . '/app/includes/functions.php');
-require_once(__DIR__ . '/app/includes/routes.php');
+require_once(HOME . '/app/includes/db.php');
+require_once(HOME . '/app/includes/functions.php');
+require_once(HOME . '/app/routes.php');
 
 error_reporting(E_ALL);
 
