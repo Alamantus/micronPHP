@@ -5,9 +5,8 @@ Checkout the wiki for detailed instructions.
 
 ## Folder Structure
 /
-- app -> controllers , views
-- cache
-- includes -> db.php
+- app -> controllers, views
+- includes -> db.php, functions.php, routes.php, user_functions.php
 - public -> assets, images
 
 ## Instructions
@@ -40,6 +39,12 @@ Example
 
 Example
 ``` <link rel="stylesheet" href="<?php echo assets('pretty/css/prettyPhoto.css')?>" type="text/css" media="screen" charset="utf-8" /> ```
+
+### Generating Image Links
+**echo images('path to css file inside public/images folder')**
+
+Example
+``` <img src="<?php echo images('cool/dog.jpg')?>" alt="dog in sunglasses" /> ```
 
 ### Including a view inside another view
 **loadView('viewName',[array of data to be passed])**

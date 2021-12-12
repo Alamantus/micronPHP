@@ -20,8 +20,16 @@ function siteurl() {
 }
 
 
+function publicPath($path){
+	return siteurl() . '/public/' . $path;
+}
+
 function assets($path){
-	return siteurl() . '/public/assets/' . $path;
+	return publicPath('assets/' . $path);
+}
+
+function images($path){
+	return publicPath('images/' . $path);
 }
 
 function route($path, $params = null, $signValue = null) {
@@ -42,7 +50,7 @@ function route($path, $params = null, $signValue = null) {
 
 function redirectRoute($path, $params = null){	
 	if($params){
-		$queryString = '?'.http_build_query($params);
+		$queryString = '?' . http_build_query($params);
 	}else{
 		$queryString = '';
 	}
