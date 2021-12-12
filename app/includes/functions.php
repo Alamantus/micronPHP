@@ -8,9 +8,10 @@ function siteurl() {
 	
 	$path = implode('/', $path);
 	$siteUrl = $_SERVER['SERVER_NAME'];
+	$protocol = 'http' . ($_SERVER['HTTPS'] ? 's' : '');
 	
 	$path = ltrim($path,DIRECTORY_SEPARATOR);
-	$url = "http://$siteUrl/{$path}";
+	$url = "{$protocol}://{$siteUrl}/{$path}";
 	
 	if(substr($url, -1) !== '/')
 		$url .= '/';
@@ -21,7 +22,7 @@ function siteurl() {
 
 
 function publicPath($path){
-	return siteurl() . '/public/' . $path;
+	return siteurl() . 'public/' . $path;
 }
 
 function assets($path){
@@ -186,4 +187,4 @@ function match_route($r,$_routes){
 	}
 }
 
-require_once(__DIR__ . 'user_functions.php');
+require_once(__DIR__ . '/user_functions.php');
