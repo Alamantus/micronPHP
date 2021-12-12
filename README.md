@@ -5,9 +5,17 @@ Checkout the wiki for detailed instructions.
 
 ## Folder Structure
 /
-- app -> controllers, views
-- includes -> db.php, functions.php, routes.php, user_functions.php
-- public -> assets, images
+- app
+    - controllers
+    - includes
+        - db.php
+        - functions.php
+        - routes.php
+        - user_functions.php
+    - views
+- public
+    - assets
+    - images
 
 ## Instructions
 

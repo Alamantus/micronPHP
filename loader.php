@@ -1,12 +1,11 @@
 <?php
 require_once('config.php');
 
-require_once('includes/db.php');
-require_once('includes/functions.php');
-require_once('includes/routes.php');
+require_once(__DIR__ . '/app/includes/db.php');
+require_once(__DIR__ . '/app/includes/functions.php');
+require_once(__DIR__ . '/app/includes/routes.php');
 
 error_reporting(E_ALL);
-$siteUrl = $_SERVER['SERVER_NAME'];
 
 $errors = 0;
 $errorMessages = array();

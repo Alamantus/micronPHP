@@ -186,4 +186,4 @@ function match_route($r,$_routes){
 	}
 }
 
-require_once('user_functions.php');
+require_once(__DIR__ . 'user_functions.php');
